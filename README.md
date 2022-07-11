@@ -91,6 +91,6 @@ gab.
 __________________________________________________________________________________________________
 
 Noch nicht implementierte Funktionen aber denkbare Verbesserungen des SMB:
-Um die Linked List sauber zu halten, könnte man die Signals bei Beenden der SubscriberProgramme abfangen 
+Um die Linked List sauber zu halten, könnte man die Signals bei Beenden der Subscriber Programme abfangen 
 und dann eine Nachricht an den Broker schicken, der dann den 
 jeweiligen Subscriber aus der Linked List löscht, damit diese nicht zu lang wird. 
