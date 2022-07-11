@@ -69,16 +69,7 @@ eingehende Nachricht von einem Publisher (P) oder einem Server (S) kommt.
 
 Fall 1 (S): Die Nachricht kam von einem Subscriber, der ein Topic abonnieren will. Die 
 Subscriberadresse und das jeweilige Topic werden im Broker gespeichert. Grundlage für die 
-Speicherung dieser Daten ist eine single Linked List. Die Knoten in dieser Linked List haben 
-folgende Struktur, um Adresse, Größe, Topic und nächsten Knoten zu speichern: 
-
-typedef struct node
-{
-struct sockaddr_in subscriber_addr;
-socklen_t subscriber_size;
-char topic[512];
-struct node *next;
-} node_t;
+Speicherung dieser Daten ist eine single Linked List.
 
 Ein neuer Subscriber wird immer als Head in die Liste eingefügt. 
 
@@ -90,7 +81,7 @@ printListIterativeFromTop → Liste auf der Konsole ausgeben (wird im Code nicht
 ist aber hilfreich für Debugging-Zwecke)
 
 Fall 2 (P): Die Nachricht kam von einem Publisher. In diesem Fall wird die Nachricht unter 
-Verwendung des Separator-Zeichens dekonstruiert und in den Variablen topic und message
+Verwendung des Separatorzeichens dekonstruiert und in den Variablen topic und message
 gespeichert. Dann wird die Linked List traversiert und geprüft, ob das gerade behandelte 
 Topic identisch mit dem Topic des aktuellen Knotens in der Linked List ist. Wenn das der Fall 
 ist, wird dann die Message (und zur Übersichtlichkeit auch das Topic) an den jeweiligen 
