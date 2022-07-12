@@ -76,7 +76,9 @@ Ein neuer Subscriber wird immer als Head in die Liste eingefügt.
 Es gibt drei Funktionen, die für die Linked List hier definiert sind: 
 
 createNewNode → um einen neuen Knoten zu erstellen
+
 insertAtHead → um den Knoten in die Liste einzufügen (als neuen Head)
+
 printListIterativeFromTop → Liste auf der Konsole ausgeben (wird im Code nicht verwendet, 
 ist aber hilfreich für Debugging-Zwecke)
 
